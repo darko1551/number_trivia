@@ -7,7 +7,6 @@ import 'package:number_trivia/widgets/button_widget.dart';
 import 'package:number_trivia/widgets/text_field_widget.dart';
 import 'package:number_trivia/bloc/trivia_bloc.dart';
 import 'package:number_trivia/bloc/trivia_state.dart';
-import 'package:number_trivia/assets/strings.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);

@@ -15,11 +15,11 @@ class NumberTriviaEvent implements TriviaEvent {
 }
 
 @immutable
-class RandomNumberTriviaEvent implements TriviaEvent{
+class RandomNumberTriviaEvent implements TriviaEvent {
   const RandomNumberTriviaEvent();
 }
 
 @immutable
-class ReturnEvent implements TriviaEvent{
+class ReturnEvent implements TriviaEvent {
   const ReturnEvent();
 }
