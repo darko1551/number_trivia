@@ -4,3 +4,4 @@ const hintString = 'Input a number';
 const searchButtonString = 'SEARCH';
 const randomButtonString = 'GET RANDOM TRIVIA';
 const knowMoreButtonString = 'KNOW MORE';
+const backButtonString = 'BACK';

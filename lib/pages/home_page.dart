@@ -28,18 +28,23 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 253, 244, 231),
+      appBar: AppBar(
+        shadowColor: const Color.fromARGB(0, 0, 0, 0),
+        backgroundColor: const Color.fromARGB(255, 253, 244, 231),
+        centerTitle: true,
+        title: const Text(
+          titleString,
+          style: TextStyle(
+            color: Color.fromARGB(255, 50, 94, 87),
+            fontSize: 25,
+          ),
+        ),
+      ),
       body: Column(
         children: [
           const Padding(
             padding: EdgeInsets.only(top: 90),
-            child: Text(
-              titleString,
-              style: TextStyle(
-                color: Color.fromARGB(255, 50, 94, 87),
-                fontSize: 20,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
           ),
           const SizedBox(
             height: 50.0,
