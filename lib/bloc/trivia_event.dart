@@ -7,7 +7,7 @@ class TriviaEvent {
 
 @immutable
 class NumberTriviaEvent implements TriviaEvent {
-  final int number;
+  final int? number;
 
   const NumberTriviaEvent({
     required this.number,

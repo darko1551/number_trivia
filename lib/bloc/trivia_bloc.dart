@@ -2,6 +2,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:bloc/bloc.dart';
 import 'package:number_trivia/bloc/trivia_event.dart';
 import 'package:number_trivia/bloc/trivia_state.dart';
+import 'package:number_trivia/exceptions/exceptions.dart';
 import 'package:number_trivia/services/trivia_service.dart';
 
 class TriviaBloc extends Bloc<TriviaEvent, TriviaState> {
@@ -16,6 +17,10 @@ class TriviaBloc extends Bloc<TriviaEvent, TriviaState> {
         ),
       );
       final number = event.number;
+      if(number == null){
+        emit(TriviaState(isLoading: false, exception: WrongInputFormatException(), trivia: null));
+        return;
+      }
       try {
         final trivia = await provider.getNumberTrivia(number: number);
         emit(

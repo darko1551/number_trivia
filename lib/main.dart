@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:number_trivia/bloc/trivia_bloc.dart';
+import 'package:number_trivia/exceptions/exceptions.dart';
 import 'package:number_trivia/pages/home_page.dart';
 import 'package:number_trivia/pages/trivia_info_page.dart';
 
@@ -41,11 +42,12 @@ class Home extends StatelessWidget {
           return const HomePage();
         } else if (state.trivia != null && state.exception == null) {
           return const TriviaInfoPage();
+        } else if (state.exception is WrongInputFormatException) {
+          return const HomePage();
         } else {
-          return  const HomePage();
+          return const HomePage();
         }
       },
     );
-
   }
 }
